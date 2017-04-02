@@ -9,10 +9,8 @@ int main(){
             c[i] += a;
         }
     }
-    printf("%d\n",c[0]);
-    printf("%d\n",c[1]);
-    printf("%d\n",c[2]);
-    printf("%d\n",c[3]);
-    printf("%d\n",c[4]);
+    for (i = 0; i < 5; i++) {
+        printf("%d\n",c[i]);
+    }
     return 0;
 }
