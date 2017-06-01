@@ -1,28 +1,27 @@
 #include <stdio.h>
 
-int main() {
-    int arr[300][300] = {{0}};
-    int n,m;
-    int x,y,i,j;
-    int e,a,b,c,k;
-    int total = 0;
-    scanf("%d %d",&n,&m);
-    for(a = 0; a < n; a++){
-        for (b = 0; b < m; b++) {
-            scanf("%d", &e);
-            arr[a][b] = e;
-        }
-    }
-    scanf("%d",&k);
-    for (c = 0; c < k; c++) {
-        scanf("%d %d %d %d",&i,&j,&x,&y);
-        for(a = i; a <= x; a++){
-            for(b = j; b <= y; b++){
-                total += arr[a][b];
-            }
-        }
-        printf("%d\n",total);
-        total = 0;
-    }
-    return 0;
+int main(){
+
+	int A,B;
+    int list[301][301]={0};
+    int N,a,b,c,d;
+    int sum=0;
+	scanf("%d %d",&A,&B);
+	for(int i=0; i<A; i++){
+		for(int j=0; j<B; j++){
+			scanf("%d",&list[i][j]);
+		}
+	}
+	scanf("%d",&N);
+	for(int j=0; j<N; j++){
+		scanf("%d %d %d %d",&a,&b,&c,&d);
+		for(int x=a; x<=c; x++){
+			for(int y=b; y<=d; y++){
+				sum += list[x-1][y-1];
+			}
+		}
+		printf("%d\n",sum);
+		sum = 0;
+	}
+	return 0;
 }
